@@ -18,14 +18,14 @@ function Header() {
       <img src={logo} width={60} height={60} />
       <div className='flex bg-slate-200 p-2 w-full mx-5 rounded-full items-center'>
         <IoMdSearch/>
-        <input type='text' placeholder="Search games" className=' px-2 bg-transparent dark:bg-cyan-500 outline-none' />
+        <input type='text' placeholder="Search games" className=' px-2 bg-transparent outline-none' />
       </div>
       <div className='cursor-pointer' >
         {theme== 'light' ? 
           ( <IoMoon 
-            onClick={() => setTheme('dark')} className='text-[35px] bg-slate-200 text-black p-1 rounded-full items-center'/>
+            onClick={() => {setTheme('dark'); localStorage.setItem('theme', 'dark')}} className='text-[35px] bg-slate-200 text-black p-1 rounded-full items-center'/>
           ) : ( <MdSunny 
-            onClick={() => setTheme('light')} className='text-[35px] bg-slate-200 text-black p-1 rounded-full items-center'/> )}
+            onClick={() => {setTheme('light'); localStorage.setItem('theme', 'light')}} className='text-[35px] bg-slate-200 text-black p-1 rounded-full items-center'/> )}
       </div>
     </div>
   )
