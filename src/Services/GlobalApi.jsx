@@ -5,7 +5,8 @@ const axiosCreate=axios.create({
     baseURL:"https://api.rawg.io/api/"
 })
 
-const getGenreList=axiosCreate.get('/genres?key=' + key)
-export default{
+const getGenreList = () => axiosCreate.get('/genres?key=' + key)
+
+export default {
     getGenreList
 }
