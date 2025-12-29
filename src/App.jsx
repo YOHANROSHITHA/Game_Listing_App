@@ -19,13 +19,11 @@ function App() {
   return (
 
     <ThemeContext.Provider value={{theme,setTheme}}>
-    <div className={ `${theme} ${theme=='dark' ?'bg-[#121212]' : null} h-screen `}>
-    <div className={`${theme === 'dark' ? 'bg-[#121212]' : ''} min-h-screen`}>
+    <div className={ `${theme} ${theme==='dark' ?'bg-[#121212]' : null} min-h-screen `}>
 
       <Header/>
       <Home/>
     
-    </div>
     </div>
   </ThemeContext.Provider>
   )

@@ -21,7 +21,7 @@ function Header() {
         <input type='text' placeholder="Search games" className=' px-2 bg-transparent outline-none' />
       </div>
       <div className='cursor-pointer' >
-        {theme== 'light' ? 
+        {theme=== 'light' ? 
           ( <IoMoon 
             onClick={() => {setTheme('dark'); localStorage.setItem('theme', 'dark')}} className='text-[35px] bg-slate-200 text-black p-1 rounded-full items-center'/>
           ) : ( <MdSunny 

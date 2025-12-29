@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import GenaralList from '../Components/GenaralList'
+import Banner from '../Components/Banner'
 import GlobalApi from '../Services/GlobalApi'
 
 
@@ -12,7 +13,7 @@ function Home() {
 
 const getAllGameslist = ()=>{
 
-  GlobalApi.getAllGameslist().then((resp)=>{
+  GlobalApi.getAllGames().then((resp)=>{
     setAllGamelist(resp.data.results)
   })
 
@@ -24,7 +25,9 @@ const getAllGameslist = ()=>{
         <GenaralList/>
       </div>
       <div className='col-span-4 md:col-span-3 '>
-        {allGameslist ? <Banner gameBanner={allGameslist[0]}/> : null}
+        { allGameslist ?.length>0?
+         <Banner gameBanner={allGameslist[0]}/> 
+         : null}
         </div>
       
       </div>
