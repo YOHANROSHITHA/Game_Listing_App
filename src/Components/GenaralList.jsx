@@ -10,7 +10,7 @@ function GenaralList() {
     const getGenreList = () => {
         GlobalApi.getGenreList()
             .then((resp) => {
-                console.log(resp.data.results);
+              
                 setGenreList(resp.data.results);
             })
             .catch((err) => {
